@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="assets/css/styles.css" />
+
+
+        <title>Novelle</title>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav container">
+               <a href="index.html" class="nav__logo">
+                <img src="assets/css/img/logo.svg" alt="" class="nav__logo-img">
+               </a> 
+
+               <div class="nav__menu" id="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link active-link">Начало</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="shop.html" class="nav__link">Kниги</a>
+                        </li>
+                    </ul>
+
+                    <div class="header--search">
+                        <input type="text" placeholder= "Search for items..." class="form__input" />
+                        <button class="search btn">
+                            <img src="assets/css/img/search-icon-2-614x460.png" alt="" />
+                        </button>
+                    </div>
+               </div>
+
+               <div class="header__user-actions">
+                <a href="wishlist.html" class="header__action-btn">
+                    <img src="assets/css/img/icon-heart.svg" alt="" />
+                </a>
+
+                <a href="cart.html" class="header__action-btn">
+                    <img src="assets/css/img/shopping-cart-outline-svgrepo-com.svg" alt="" />
+                    <span class="count">0</span>
+                </a>
+               </div>
+            </nav>
+        </header>
+
+        <div id="success-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+              <span class="close-button">&times;</span>
+              <div id="modal-text"></div>
+            </div>
+        </div>
+          
+
+        <main class="main">
+            <section class="home">
+                <div class="home__container container grid">
+                    <div class="promo-carousel">
+                        <div class="carousel">
+
+                          <button class="carousel-btn left" onclick="showItem(current - 1)">&#10094;</button>
+                    
+                          <div class="carousel-item active">
+                            <img src="assets/css/img/1200x350-backman.jpg" alt="Book 1" class="img1">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/css/img/kart-izi-1200x350_1.jpg" alt="Book 2" class="img1">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/css/img/out-now-aristokr-1200x350.jpg" alt="Book 3" class="img1">
+                          </div>
+                    
+                          <button class="carousel-btn right" onclick="showItem(current + 1)">&#10095;</button>
+                        </div>
+                    </div>
+
+                    <section class="info__section">
+                        <div class="shipping">
+                            <img src="assets/css/img/catalog.svg" alt="Каталог">
+                            <div class="text">
+                                <h3>Огромен каталог</h3>
+                                <p>За да имате възможно най-голям избор</p>
+                            </div>
+                        </div>
+                        <div class="shipping">
+                            <img src="assets/css/img/shipping.svg" alt="Безплатна доставка">
+                            <div class="text">
+                                <h3>Безплатна доставка</h3>
+                                <p>За поръчки над 20лв.</p>
+                            </div>
+                        </div>
+                        <div class="shipping">
+                            <img src="assets/css/img/percent.svg" alt="Промоции">
+                            <div class="text">
+                                <h3>Големи промоции</h3>
+                                <p>Разнообразни отстъпки и оферти</p>
+                            </div>
+                        </div>
+                        <div class="shipping">
+                            <img src="assets/css/img/id.svg" alt="Лоялни клиенти">
+                            <div class="text">
+                                <h3>Карти за лоялни клиенти</h3>
+                                <p>Специална грижа за нашите клиенти</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <section class="newest">
+                <h3 class="newest_title">
+                    <span class="newest__title">Категория</span>
+                </h3>
+
+                <div class="newest__container">
+                    <div class="new__books">
+                      <img src="assets/css/img/rom_book.jpg" alt="Книга 1">
+                      <h3>Романтика</h3>
+                    </div>
+                
+                    <div class="new__books">
+                      <img src="assets/css/img/mystery_book.jpg" alt="Книга 2">
+                      <h3>Мистерия</h3>
+                    </div>
+
+                    <div class="new__books">
+                      <img src="assets/css/img/fantasy_book.jpg" alt="Книга 2">
+                      <h3>Фантастика</h3>
+                    </div>
+
+                    <div class="new__books">
+                        <img src="assets/css/img/science_book.jpg" alt="Книга 2">
+                        <h3>Наука</h3>
+                    </div>
+
+                    <div class="new__books">
+                        <img src="assets/css/img/comics_book.jpg" alt="Книга 2">
+                        <h3>Комикси</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="newest">
+                <h3 class="newest_title">
+                    <span class="newest__title">Нови попълнения</span>
+                </h3>
+
+                <div class="newest__container">
+                    <div class="new__books">
+
+                        <a href="book_razni_novi_syveti.html" class="book-link">
+                            <img src="assets/css/img/book1.jpg" alt="Книга 1">
+                            <h3 class="book__title">Разни нови съвети за чуждите думи</h3>
+                            <p>Владко Мурдаров</p>
+                            <span class="price">20,00 лв.</span>
+                        </a>
+
+                        <div class="book__actions">
+                            <button class="btn-fav">⁠🤍</button>
+                            <button class="btn-cart">🛒 Купи</button>
+                        </div>
+                    </div>
+                
+                    <div class="new__books">
+
+                        <a href="v_neokosenata_treva.html" class="book-link">
+                            <img src="assets/css/img/book2.jpg" alt="Книга 2">
+                            <h3 class="book__title">В неокосената трева</h3>
+                            <p>Тревър Ноа</p>
+                            <span class="price">22,00 лв.</span>
+                        </a>
+
+                        <div class="book__actions">
+                            <button class="btn-fav">⁠🤍</button>
+                            <button class="btn-cart">🛒 Купи</button>
+                        </div>
+                    </div>
+
+                    <div class="new__books">
+
+                        <a href="kriminalistkite.html" class="book-link">
+                            <img src="assets/css/img/new_book3.jpg" alt="Книга 2">
+                            <h3 class="book__title">KриминалистКите</h3>
+                            <p>Людмил Георгиев</p>
+                            <span class="price">17,90 лв.</span>
+                        </a>
+
+                      <div class="book__actions">
+                        <button class="btn-fav">⁠🤍</button>
+                        <button class="btn-cart">🛒 Купи</button>
+                      </div>
+                    </div>
+
+                    <div class="new__books">
+
+                        <a href="91_etajnata_kyshta.html" class="book-link">
+                            <img src="assets/css/img/new_book4.jpg" alt="Книга 2">
+                            <h3 class="book__title">91-етажната къща на дърво</h3>
+                            <p>Анди Грифитс</p>
+                            <span class="price">22,00 лв.</span>
+                        </a>
+
+                        <div class="book__actions">
+                            <button class="btn-fav">⁠🤍</button>
+                            <button class="btn-cart">🛒 Купи</button>
+                        </div>
+                    </div>
+
+                    <div class="new__books">
+
+                        <a href="enciklopedia_kontinentite.html" class="book-link">
+                            <img src="assets/css/img/new_book5.jpg" alt="Книга 2">
+                            <h3 class="book__title">Енциклопедия - Континентите</h3>
+                            <p>Колхида</p>
+                            <span class="price">31,99 лв.</span>
+                        </a>
+
+                        <div class="book__actions">
+                            <button class="btn-fav">⁠🤍</button>
+                            <button class="btn-cart">🛒 Купи</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="newest">
+                <h3 class="newest_title">
+                    <span class="newest__title">Промоция</span>
+                </h3>
+
+                <div class="newest__container">
+                    <div class="new__books">
+
+                        <a href="noshta_v_koqto_tq_izchezna.html" class="book-link">
+                            <img src="assets/css/img/promo_book1.jpg" alt="Книга 1">
+                            <span class="promo">-30%</span>
+                            <h3 class="book__title">Нощта, в която тя изчезна</h3>
+                            <p>Лиза Джуъл</p>
+                            <span class="price">20,00 лв.</span>
+                        </a>
+
+                      <div class="book__actions">
+                        <button class="btn-fav">⁠🤍</button>
+                        <button class="btn-cart">🛒 Купи</button>
+                      </div>
+                    </div>
+                
+                    <div class="new__books">
+
+                        <a href="1984.html" class="book-link">
+                            <img src="assets/css/img/promo_book2.jpg" alt="Книга 2">
+                            <span class="promo">-10%</span>
+                            <h3 class="book__title">1984 - твърди корици</h3>
+                            <p>Джордж Оруел</p>
+                            <span class="price">17,00 лв.</span>
+                        </a>
+
+                      <div class="book__actions">
+                        <button class="btn-fav">⁠🤍</button>
+                        <button class="btn-cart">🛒 Купи</button>
+                      </div>
+                    </div>
+
+                    <div class="new__books">
+
+                        <a href="preobrazenata_zemq.html" class="book-link">
+                            <img src="assets/css/img/promo_book3.jpg" alt="Книга 2">
+                            <span class="promo">-30%</span>
+                            <h3 class="book__title">Преобразената земя</h3>
+                            <p>Питър Франкопан</p>
+                            <span class="price">36,00 лв.</span>
+                        </a>
+
+                      <div class="book__actions">
+                        <button class="btn-fav">⁠🤍</button>
+                        <button class="btn-cart">🛒 Купи</button>
+                      </div>
+                    </div>
+
+                    <div class="new__books">
+
+                        <a href="the_strawberry_patch_pancake_house.html" class="book-link">
+                            <img src="assets/css/img/promo_book4.jpg" alt="Книга 2">
+                            <span class="promo">-15%</span>
+                            <h3 class="book__title">The Strawberry Patch Pancake House</h3>
+                            <p>Laurie Gilmore</p>
+                            <span class="price">20,00 лв.</span>
+                        </a>
+
+                        <div class="book__actions">
+                            <button class="btn-fav">⁠🤍</button>
+                            <button class="btn-cart">🛒 Купи</button>
+                        </div>
+                    </div>
+
+                    <div class="new__books">
+
+                        <a href="phantom.html" class="book-link">
+                            <img src="assets/css/img/promo_book5.jpg" alt="Книга 2">
+                            <span class="promo">-20%</span>
+                            <h3 class="book__title">Phantom</h3>
+                            <p>H. D. Carlton</p>
+                            <span class="price">25,49 лв.</span>
+                        </a>
+
+                        <div class="book__actions">
+                            <button class="btn-fav">⁠🤍</button>
+                            <button class="btn-cart">🛒 Купи</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="authors">
+                <h3 class="newest_title">
+                  <span class="newest_title">Избрани автори</span>
+                </h3>
+              
+                <div class="authors__slider-container">
+                  <button class="slider-btn left" onclick="scrollAuthors(-1)">‹</button>
+                  
+                  <div class="authors__slider" id="authorsSlider">
+                    <div class="author"><img src="assets/css/img/stephen_king.jpeg" alt="Книга 1"><p class="author-name">Стивън Кинг</p></div>
+                    <div class="author"><img src="assets/css/img/christie_book.jpeg" alt="Книга 2"><p class="author-name">Агата Кристи</p></div>
+                    <div class="author"><img src="assets/css/img/terry_pratchet.jpg" alt="Книга 3"><p class="author-name">Тери Пратчет</p></div>
+                    <div class="author"><img src="assets/css/img/dan_braun.jpg" alt="Книга 4"><p class="author-name">Дан Браун</p></div>
+                    <div class="author"><img src="assets/css/img/j_k_rolling.jpg" alt="Книга 5"><p class="author-name">Дж. К. Роулинг</p></div>
+                    <div class="author"><img src="assets/css/img/j_r_r_tolkin.jpg" alt="Книга 1"><p class="author-name">Дж. Р. Р. Толкин</p></div>
+                    <div class="author"><img src="assets/css/img/william_shekspir.jpg" alt="Книга 2"><p class="author-name">Уилям Шекспир</p></div>
+                    <div class="author"><img src="assets/css/img/nora_roberts.jpg" alt="Книга 3"><p class="author-name">Нора Робъртс</p></div>
+                  </div>
+              
+                  <button class="slider-btn right" onclick="scrollAuthors(1)">›</button>
+                </div>
+              </section>
+
+              <footer class="footer">
+                <div class="footer__content">
+                  <div class="footer__section">
+                    <h4>За нас</h4>
+                    <p>Ние сме онлайн книжарница, която обича книгите и своите клиенти.</p>
+                  </div>
+              
+                  <div class="footer__section">
+                    <h4>Навигация</h4>
+                    <ul>
+                      <li><a href="#">Начало</a></li>
+                      <li><a href="#">Локация</a></li>
+                      <li><a href="#">Контакти</a></li>
+                    </ul>
+                  </div>
+              
+                  <div class="footer__section">
+                    <h4>Свържи се с нас</h4>
+                    <p>Email: support@bookstore.bg</p>
+                    <p>Телефон: +359 888 123 456</p>
+                  </div>
+                </div>
+                <div class="footer__bottom">
+                  <p>&copy; 2025 - Онлайн книжарница Novelle</p>
+                </div>
+              </footer>
+        </main>
+
+        <script src="assets/index.js"></script>
+  
+          
+    </body>
+</html>

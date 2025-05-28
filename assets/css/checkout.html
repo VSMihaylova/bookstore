@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="" />
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <link rel="stylesheet" href="assets/css/styles.css" />
+
+
+        <title>Novelle</title>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav container">
+               <a href="index.html" class="nav__logo">
+                <img src="assets/css/img/logo.svg" alt="" class="nav__logo-img">
+               </a> 
+
+               <div class="nav__menu" id="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link active-link">Начало</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="shop.html" class="nav__link">Магазин</a>
+                        </li>
+                    </ul>
+
+                    <div class="header--search">
+                        <input type="text" placeholder= "Search for items..." class="form__input" />
+                        <button class="search btn">
+                            <img src="assets/css/img/search-icon-2-614x460.png" alt="" />
+                        </button>
+                    </div>
+               </div>
+
+               <div class="header__user-actions">
+                <a href="wishlist.html" class="header__action-btn">
+                    <img src="assets/css/img/icon-heart.svg" alt="" />
+                </a>
+
+                <a href="cart.html" class="header__action-btn">
+                    <img src="assets/css/img/shopping-cart-outline-svgrepo-com.svg" alt="" />
+                    <span class="count">0</span>
+                </a>
+               </div>
+            </nav>
+        </header>
+
+        <main class="main">
+
+            <table class="cart-table" id="order-summary">
+            <thead>
+                    <tr>
+                    <th>Продукт</th>
+                    <th>Количество</th>
+                    <th>Цена за брой</th>
+                    <th>Общо</th>
+                    </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                <td colspan="3">Общо:</td>
+                <td id="summary-total">0.00 лв.</td>
+                </tr>
+            </tfoot>
+            </table>
+
+
+            <section class="checkout container">    
+                <h2 class="checkout__title">Завършване на поръчка</h2>
+            
+                <form id="order-form" class="checkout__form">
+                  <div class="form__group">
+                    <label for="name" class="form__label">Име и фамилия *</label>
+                    <input type="text" id="name" name="name" class="form__input" required>
+                  </div>
+            
+                  <div class="form__group">
+                    <label for="email" class="form__label">Имейл *</label>
+                    <input type="email" id="email" name="email" class="form__input" required>
+                  </div>
+            
+                  <div class="form__group">
+                    <label for="phone" class="form__label">Телефон *</label>
+                    <input type="tel" id="phone" name="phone" class="form__input" required>
+                  </div>
+            
+                  <div class="form__group">
+                    <label for="address" class="form__label">Адрес за доставка *</label>
+                    <textarea id="address" name="address" class="form__textarea" rows="3" required></textarea>
+                  </div>
+            
+                  <div class="form__group">
+                    <span class="form__label">Начин на плащане</span>
+                    <label class="form__radio-label">
+                      <input type="radio" name="payment" value="cash" class="form__radio" checked>
+                      Наложен платеж
+                    </label>
+                  </div>
+            
+                  <button type="submit" class="form__btn">Поръчай</button>
+                </form>
+            </section>
+
+            <footer class="footer">
+                <div class="footer__content">
+                  <div class="footer__section">
+                    <h4>За нас</h4>
+                    <p>Ние сме онлайн книжарница, която обича книгите и своите клиенти.</p>
+                  </div>
+              
+                  <div class="footer__section">
+                    <h4>Навигация</h4>
+                    <ul>
+                      <li><a href="#">Начало</a></li>
+                      <li><a href="#">Локация</a></li>
+                      <li><a href="#">Контакти</a></li>
+                    </ul>
+                  </div>
+              
+                  <div class="footer__section">
+                    <h4>Свържи се с нас</h4>
+                    <p>Email: support@bookstore.bg</p>
+                    <p>Телефон: +359 888 123 456</p>
+                  </div>
+                </div>
+                <div class="footer__bottom">
+                  <p>&copy; 2025 - Онлайн книжарница Novelle</p>
+                </div>
+              </footer>
+        </main>
+        <script src="assets/checkout.js"></script>
+    </body>
+</html>

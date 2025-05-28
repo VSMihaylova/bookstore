@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="assets/css/styles.css" />
+
+
+        <title>Novelle</title>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav container">
+               <a href="index.html" class="nav__logo">
+                <img src="assets/css/img/logo.svg" alt="" class="nav__logo-img">
+               </a> 
+
+               <div class="nav__menu" id="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link active-link">Начало</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="shop.html" class="nav__link">Книги</a>
+                        </li>
+                    </ul>
+
+                    <div class="header--search">
+                        <input type="text" placeholder= "Search for items..." class="form__input" />
+                        <button class="search btn">
+                            <img src="assets/css/img/search-icon-2-614x460.png" alt="" />
+                        </button>
+                    </div>
+               </div>
+
+               <div class="header__user-actions">
+                <a href="wishlist.html" class="header__action-btn">
+                    <img src="assets/css/img/icon-heart.svg" alt="" />
+                </a>
+
+                <a href="cart.html" class="header__action-btn">
+                    <img src="assets/css/img/shopping-cart-outline-svgrepo-com.svg" alt="" />
+                    <span class="count">0</span>
+                </a>
+               </div>
+            </nav>
+        </header>
+
+        <div id="success-modal" class="modal">
+          <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modal-text"></div>
+          </div>
+        </div>
+
+        <main class="main">
+            <div class="baner">
+                <img src="assets/css/img/baner_ozone.jpg" alt="">
+            </div>
+            <section class="book_info">
+                <div class="book-detail__image">
+                    <img src="assets/css/img/new_book5.jpg" alt="Книга 1">
+                </div> 
+                
+                <div class="book-detail__info">
+                    <h1 class="book__title">Енциклопедия - Континентите</h1>
+                    <p><strong>Издателство:</strong> Колхида</p>
+                    
+                    <div class="book_price_cont">
+                        <span class="price">31,99 лв.</span>
+                        <div class="book__actions">
+                            <button class="btn-fav">🤍</button>
+                            <button class="btn-cart">🛒 Купи</button>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="book-specs">
+                    <tr>
+                      <td>Издателство</td>
+                      <td><strong>Колхида</strong></td>
+                    </tr>
+                    <tr>
+                      <td>ISBN</td>
+                      <td><strong id="isbn">9789546722942</strong></td>
+                    </tr>
+                    <tr>
+                      <td>Година на издаване</td>
+                      <td><strong>2025</strong></td>
+                    </tr>
+                    <tr>
+                      <td>Корица</td>
+                      <td><strong>твърда</strong></td>
+                    </tr>
+                    <tr>
+                      <td>Език</td>
+                      <td><strong>български</strong></td>
+                    </tr>
+                  </table>
+            </section>
+
+            <section class="book-details-tabs">
+                <div class="tab">
+                  <h2>Описание</h2>
+                  <p>
+                    Преди милиони-милиони години цялата суша на Земята представлявала един огромен супер континент, наречен Пангея. Но поради движението на тектоничните плочи - огромни парчета от земната кора, Пангея започнала да се разпада на части - континентите, които днес познаваме. В контекста на дългата история на нашата планета, днешното подреждане на континентите може да е само моментна снимка във времето, защото според прогнозите на учените след още хикс милиона години на Земята отново ще се образува един супер континент – Амасия.
+                  </p>
+                  <p>
+                    Повече от 300 години учените изучават континентите и тяхното движение. В тази книга обаче ще ви разкажем за дивата природа и природниме забележителности на всеки от тях, за държавите, градовете и населените места. И разбира се, ще научите много за традиците, културата и хората, които населяват всяка от земите - Европа, Азия, Африка, Северна Америка, Южна Америка, Австралия и Антарктида.
+                  </p>
+                  <p>
+                    Приятно пътешествие!
+                  </p>
+                </div>
+              
+                <div class="tab">
+                  <h2>Мнения</h2>
+                  
+                  <form class="review-form">
+                    <label for="name">Име:</label>
+                    <input type="text" id="name" name="name" required>
+              
+                    <label for="comment">Коментар:</label>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+              
+                    <button type="submit">Изпрати мнение</button>
+                  </form>
+                </div>
+            </section>
+
+            <section class="newest">
+                <h3 class="newest_title">
+                    <span class="newest__title">СВЪРЗАНИ ПРОДУКТИ</span>
+                </h3>
+
+                <div class="newest__container">
+                    <div class="new__books">
+
+                        <a href="book_razni_novi_syveti.html" class="book-link">
+                            <img src="assets/css/img/book1.jpg" alt="Книга 1">
+                            <h3>Заглавие на книгата</h3>
+                            <p>Кратко описание на книгата.</p>
+                            <span class="price">15.99 лв.</span>
+                        </a>
+
+                        <div class="book__actions">
+                            <button class="btn-fav">⁠🤍</button>
+                            <button class="btn-cart">🛒 Купи</button>
+                        </div>
+                    </div>
+                
+                    <div class="new__books">
+                      <img src="assets/css/img/book2.jpg" alt="Книга 2">
+                      <h3>Заглавие на книга 2</h3>
+                      <p>Още една хитова книга.</p>
+                      <span class="price">12.49 лв.</span>
+
+                      <div class="book__actions">
+                        <button class="btn-fav">⁠🤍</button>
+                        <button class="btn-cart">🛒 Купи</button>
+                      </div>
+                    </div>
+
+                    <div class="new__books">
+                      <img src="assets/css/img/new_book3.jpg" alt="Книга 2">
+                      <h3>Заглавие на книга 2</h3>
+                      <p>Още една хитова книга.</p>
+                      <span class="price">12.49 лв.</span>
+
+                      <div class="book__actions">
+                        <button class="btn-fav">⁠🤍</button>
+                        <button class="btn-cart">🛒 Купи</button>
+                      </div>
+                    </div>
+
+                    <div class="new__books">
+                        <img src="assets/css/img/new_book4.jpg" alt="Книга 2">
+                        <h3>Заглавие на книга 2</h3>
+                        <p>Още една хитова книга.</p>
+                        <span class="price">12.49 лв.</span>
+
+                        <div class="book__actions">
+                            <button class="btn-fav">⁠🤍</button>
+                            <button class="btn-cart">🛒 Купи</button>
+                        </div>
+                    </div>
+
+                    <div class="new__books">
+                        <img src="assets/css/img/new_book5.jpg" alt="Книга 2">
+                        <h3>Заглавие на книга 2</h3>
+                        <p>Още една хитова книга.</p>
+                        <span class="price">12.49 лв.</span>
+
+                        <div class="book__actions">
+                            <button class="btn-fav">⁠🤍</button>
+                            <button class="btn-cart">🛒 Купи</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+              
+
+            <footer class="footer">
+                <div class="footer__content">
+                  <div class="footer__section">
+                    <h4>За нас</h4>
+                    <p>Ние сме онлайн книжарница, която обича книгите и своите клиенти.</p>
+                  </div>
+              
+                  <div class="footer__section">
+                    <h4>Навигация</h4>
+                    <ul>
+                      <li><a href="#">Начало</a></li>
+                      <li><a href="#">Локация</a></li>
+                      <li><a href="#">Контакти</a></li>
+                    </ul>
+                  </div>
+              
+                  <div class="footer__section">
+                    <h4>Свържи се с нас</h4>
+                    <p>Email: support@bookstore.bg</p>
+                    <p>Телефон: +359 888 123 456</p>
+                  </div>
+                </div>
+                <div class="footer__bottom">
+                  <p>&copy; 2025 - Онлайн книжарница Novelle</p>
+                </div>
+            </footer>
+        </main>
+        <script src="assets/index.js"></script>
+        <script src="assets/books_content.js"></script>
+                   
+    </body>
+</html>
