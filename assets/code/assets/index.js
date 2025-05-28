@@ -18,6 +18,23 @@ function scrollAuthors(direction) {
   });
 }
 
+document.getElementById("prevBtn").addEventListener("click", () => {
+  showItem(current - 1);
+});
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+  showItem(current + 1);
+});
+
+document.getElementById("scrollLeftBtn").addEventListener("click", () => {
+  scrollAuthors(-1);
+});
+
+document.getElementById("scrollRightBtn").addEventListener("click", () => {
+  scrollAuthors(1);
+});
+
+
 function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const count = cart.length;

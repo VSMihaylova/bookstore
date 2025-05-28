@@ -62,7 +62,7 @@
                     <div class="promo-carousel">
                         <div class="carousel">
 
-                          <button class="carousel-btn left" onclick="showItem(current - 1)">&#10094;</button>
+                          <button class="carousel-btn left" id ="prevBtn">&#10094;</button>
                     
                           <div class="carousel-item active">
                             <img src="assets/css/img/1200x350-backman.jpg" alt="Book 1" class="img1">
@@ -74,7 +74,7 @@
                             <img src="assets/css/img/out-now-aristokr-1200x350.jpg" alt="Book 3" class="img1">
                           </div>
                     
-                          <button class="carousel-btn right" onclick="showItem(current + 1)">&#10095;</button>
+                          <button class="carousel-btn right" id ="nextBtn">&#10095;</button>
                         </div>
                     </div>
 
@@ -320,7 +320,7 @@
                 </h3>
               
                 <div class="authors__slider-container">
-                  <button class="slider-btn left" onclick="scrollAuthors(-1)">‹</button>
+                  <button class="slider-btn left" id ="scrollLeftBtn">‹</button>
                   
                   <div class="authors__slider" id="authorsSlider">
                     <div class="author"><img src="assets/css/img/stephen_king.jpeg" alt="Книга 1"><p class="author-name">Стивън Кинг</p></div>
@@ -333,7 +333,7 @@
                     <div class="author"><img src="assets/css/img/nora_roberts.jpg" alt="Книга 3"><p class="author-name">Нора Робъртс</p></div>
                   </div>
               
-                  <button class="slider-btn right" onclick="scrollAuthors(1)">›</button>
+                  <button class="slider-btn right" id ="scrollRightBtn">›</button>
                 </div>
               </section>
 
